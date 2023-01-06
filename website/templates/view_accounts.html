@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %}View Balance{% endblock %} {% block
+content %}
+
+<form method="GET">
+    <br />
+    <h3 align="center">View Balance</h3>
+    <ul class="list-group list-group-flush" id="notes">
+        {% for account in user.accounts %}
+        <li class="list-group-item" style="color: green; font-size: 20px">
+            Account Number: {{ account.id }} <br />
+            Balance: $ {{ account.balance }}
+            <button type="button" class="close" onClick="deleteAccount({{ account.id }})">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+</form>
+
+{% endblock %}

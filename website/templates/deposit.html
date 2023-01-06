@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Deposit{% endblock %} {% block
+content %}
+
+<form method="POST">
+    <br />
+    <h3 align="center">Deposit</h3>
+    <div class="form-group">
+        <label for="id">Account Number</label>
+        <input
+            type="number"
+            class="form-control"
+            id="id"
+            name="id"
+            placeholder="Enter Account Number" />
+    </div>
+    <div class="form-group">
+        <label for="balance">Deposit Amount</label>
+        <input
+            type="number"
+            class="form-control"
+            id="balance"
+            name="balance"
+            placeholder="Input Amount" />
+    </div>
+    <button type="submit" class="btn btn-success">Deposit</button>
+</form>
+
+{% endblock %}
